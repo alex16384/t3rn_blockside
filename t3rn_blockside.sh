@@ -2,9 +2,6 @@
     sudo apt update -y
     sudo apt upgrade -y
     sudo apt install -y curl figlet jq build-essential gcc unzip wget lz4 bc
-
-    install_dependencies
-
     echo -e "${CLR_INFO}Скачиваение и установка актуальной версии ноды t3rn...${CLR_RESET}"
     LATEST_VERSION=$(curl -s https://api.github.com/repos/t3rn/executor-release/releases/latest | grep 'tag_name' | cut -d\" -f4)
     EXECUTOR_URL="https://github.com/t3rn/executor-release/releases/download/${LATEST_VERSION}/executor-linux-${LATEST_VERSION}.tar.gz"
